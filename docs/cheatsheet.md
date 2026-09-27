@@ -1,4 +1,4 @@
-# Git 速查表（VS Code 版）
+# Git & VS Code 速查表
 
 > 左欄是你想做的事情，中間是在 VS Code 怎麼做，右邊是對應的 CLI 指令。
 

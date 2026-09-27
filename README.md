@@ -1,6 +1,6 @@
-# GDG on Campus NTUST — Git Workshop 卡片牆
+# Project-1151-1 Git 卡片牆
 
-這是 GDG on Campus NTUST 舉辦的 Git 多人協作 Workshop 種子專案。每位學員透過編輯 `data/` 底下的 Markdown 檔案來製作自己的個人卡片，練習 Git 的基本操作與多人協作流程。當所有人的卡片合併到主專案後，網頁上會出現一面精美的卡片牆。
+這是 GDG-NTUST 的 Git 卡片牆專案。每位學員透過編輯 `data/` 底下的 Markdown 檔案來製作自己的個人卡片，練習 Git 的基本操作與多人協作流程。當所有人的卡片合併到主專案後，網頁上會出現一面精美的卡片牆。
 
 > **學員只需要編輯 `data/` 資料夾底下的 `.md` 檔案，不需要碰任何 HTML、CSS 或 JavaScript。**
 
@@ -81,9 +81,14 @@ node scripts/validate.mjs
 
 ## 相關文件
 
+### 學員
+
 - [課前準備指南](docs/pre-setup.md) — 課前必須完成的安裝與配置
-- [學員指南](docs/workshop-guide.md) — 課程中跟著做的任務清單
-- [VS Code Git 速查表](docs/cheatsheet.md) — 情境 → VS Code 操作 → CLI 指令 對照
-- [講師流程表](docs/instructor/run-of-show.md) — 50 分鐘時間表
-- [衝突演練腳本](docs/instructor/conflict-script.md) — 刻意製造衝突的教學劇本（選用）
+- [學員指南](docs/guide.md) — 課程中跟著做的任務清單
+- [Git & VS Code 速查表](docs/cheatsheet.md) — 情境 → VS Code 操作 → CLI 指令
 - [貢獻指南](CONTRIBUTING.md) — 資料格式與 commit 規範
+
+### 講師
+
+- [講師流程表](docs/instructor/rundown.md) — 50 分鐘時間表
+- [衝突演練腳本](docs/instructor/conflict-script.md) — 模擬衝突的教學劇本
