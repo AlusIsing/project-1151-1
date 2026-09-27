@@ -154,7 +154,11 @@ git push origin feat/<branch 名稱>
 ## 衝突解決後的驗證
 
 ```bash
-node scripts/validate.mjs
+# Windows（PowerShell / CMD）
+scripts\validate
+
+# macOS / Linux / Git Bash
+bash scripts/validate.sh
 ```
 
 確認沒有殘留衝突標記（`<<<<<<<`、`=======`、`>>>>>>>`）。學員把衝突標記直接 commit 上去是最常見的問題。

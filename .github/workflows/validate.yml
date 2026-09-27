@@ -11,10 +11,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
       - name: Validate
-        run: node scripts/validate.mjs
+        run: bash scripts/validate.sh

@@ -13,7 +13,11 @@
 1. 預估到場人數，決定組數（每組 3 至 4 人）
 2. 在終端機執行：
    ```bash
-   node scripts/init-teams.mjs <組數>
+   # Windows（PowerShell / CMD）
+   scripts\init-teams <組數>
+
+   # macOS / Linux / Git Bash
+   bash scripts/init-teams.sh <組數>
    ```
 3. 確認輸出正確，commit 並 push：
    ```bash
@@ -39,7 +43,7 @@
 
 - [ ] 投影幕可正常顯示 GitHub Pages 網頁
 - [ ] 講師電腦上已 clone 上游 repository
-- [ ] `node scripts/build.mjs` 可正常執行
+- [ ] `scripts\build`（Windows）或 `bash scripts/build.sh`（macOS / Linux）可正常執行
 - [ ] 已準備好小組代號分配清單
 - [ ] 已確認哪些學員適合當組長（有基礎者優先）
 - [ ] 已先決定好最終成品的展示網頁（用來開場展示）
@@ -53,12 +57,12 @@
 **講師要做的事：**
 
 1. **先展示最終成品**
-   - 投影一個已完成的卡片牆（可用事先準備的 demo 頁面，或本機跑 `node scripts/build.mjs` 後打開 `dist/index.html`）
+   - 投影一個已完成的卡片牆（可用事先準備的 demo 頁面，或本機跑 `scripts\build`（Windows）/ `bash scripts/build.sh`（macOS / Linux）後打開 `dist/index.html`）
    - 台詞：「今天結束的時候，你們每個人都會有一張這樣的個人卡片出現在這個網頁上。」
    - 讓大家看到 emoji、名字、自我介紹、興趣標籤——產生動力
 
 2. **快速確認課前準備**
-   - 「已經裝好 Git 的舉手？VS Code？Node.js？GitHub 帳號？」
+   - 「已經裝好 Git 的舉手？VS Code？GitHub 帳號？」
    - 沒完成的人，請旁邊同學協助或先看 [課前準備指南](../pre-setup.md)
 
 3. **公布組別**
@@ -297,7 +301,7 @@ git push origin feat/<你的英文名>
 
 ### 網路斷線
 
-- `node scripts/build.mjs` 不需要網路，可以離線建置
+- `scripts\build`（Windows）/ `bash scripts/build.sh`（macOS / Linux）不需要網路，可以離線建置
 - 講師本機 build 後直接展示 `dist/index.html`
 - Push / PR / merge 等操作暫停，等網路恢復
 

@@ -24,13 +24,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
       - name: Build
-        run: node scripts/build.mjs
+        run: bash scripts/build.sh
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

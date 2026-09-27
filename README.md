@@ -23,11 +23,13 @@ docs/              ← 教學文件
 講師在課程當天依到場人數決定組數後執行：
 
 ```bash
-# 方式一：指定組數（自動產生 Team A 到 Team E）
-node scripts/init-teams.mjs 5
+# Windows（PowerShell / CMD）
+scripts\init-teams 5          # 方式一：指定組數（自動產生 Team A 到 Team E）
+scripts\init-teams a b c d e  # 方式二：明確指定代號
 
-# 方式二：明確指定代號
-node scripts/init-teams.mjs a b c d e
+# macOS / Linux / Git Bash
+bash scripts/init-teams.sh 5
+bash scripts/init-teams.sh a b c d e
 ```
 
 執行後 commit 並 push 到 `main`：
@@ -49,7 +51,6 @@ GitHub Actions 會自動建置並部署到 GitHub Pages。
 - Git
 - GitHub 帳號
 - Visual Studio Code
-- Node.js（v20 以上）
 
 ## 組長操作流程
 
@@ -63,10 +64,14 @@ GitHub Actions 會自動建置並部署到 GitHub Pages。
 
 ## 本機預覽
 
-不需要安裝任何套件，只要有 Node.js 20 以上：
+不需要安裝額外工具，只要有 Git 即可：
 
 ```bash
-node scripts/build.mjs
+# Windows（PowerShell / CMD）
+scripts\build
+
+# macOS / Linux / Git Bash
+bash scripts/build.sh
 ```
 
 然後用瀏覽器打開 `dist/index.html` 即可預覽。
@@ -74,7 +79,11 @@ node scripts/build.mjs
 ## 驗證資料
 
 ```bash
-node scripts/validate.mjs
+# Windows（PowerShell / CMD）
+scripts\validate
+
+# macOS / Linux / Git Bash
+bash scripts/validate.sh
 ```
 
 會檢查資料檔格式、衝突標記、成員引用等問題。

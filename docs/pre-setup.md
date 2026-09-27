@@ -2,14 +2,13 @@
 
 > **請在活動當天之前完成以下所有步驟。** 現場的網路和時間有限，如果當天才開始安裝，很可能會來不及跟上進度。整個準備過程大約需要 **25–35 分鐘**。
 
-我們在活動中會用到四樣工具：
+我們在活動中會用到三樣工具：
 
 | 工具 | 用途 | 比喻 |
 |------|------|------|
 | **Git** | 版本控制系統，記錄檔案的每一次修改 | 像是幫文件自動存檔的時光機 |
 | **GitHub** | 雲端平台，讓多人可以一起協作 | 像是 Google Drive，但專門給程式碼用的 |
 | **VS Code** | 程式碼編輯器，我們用它來編輯檔案和操作 Git | 像是進階版的記事本 |
-| **Node.js** | JavaScript 執行環境，用來在本機預覽網頁和驗證資料 | 像是讓腳本可以跑起來的引擎 |
 
 ---
 
@@ -215,55 +214,7 @@ VS Code 是我們在活動中使用的程式碼編輯器。它免費、跨平台
 
 ---
 
-## Step 5：安裝 Node.js
-
-Node.js 是 JavaScript 的執行環境。我們的專案用它來在本機預覽網頁和驗證資料格式。
-
-> 即使你不是寫程式的人也不用擔心，安裝好就好，活動中不需要寫任何 JavaScript。
-
-### Windows
-
-1. 前往 [nodejs.org](https://nodejs.org)
-2. 點擊 **LTS**（長期支援版）的下載按鈕——通常是左邊那個綠色的大按鈕
-3. 下載完成後執行安裝檔（`node-vXX.XX.X-x64.msi`）
-4. 安裝過程中全部維持預設值，一路按 **Next** → **Install** → **Finish**
-   - 如果出現「Automatically install the necessary tools」的勾選項，可以**不勾**（不需要額外工具）
-
-### macOS
-
-**方法一：從官網下載（推薦）**
-
-1. 前往 [nodejs.org](https://nodejs.org)
-2. 點擊 **LTS** 版本的 **macOS Installer** 下載
-3. 打開 `.pkg` 安裝檔，按照指示安裝
-
-**方法二：透過 Homebrew**（如果你已經有裝 Homebrew）
-
-```
-brew install node
-```
-
-### 驗證安裝
-
-打開終端機（或 VS Code 終端機），輸入：
-
-```bash
-node --version
-```
-
-你應該會看到類似這樣的輸出：
-
-```
-v20.18.0
-```
-
-> 版本號碼不需要完全一樣，只要是 **v20 以上**就可以。
-
-如果顯示「不是內部或外部命令」或「command not found」，請關閉終端機重新打開再試一次。如果還是不行，可能需要重新啟動電腦讓 PATH 環境變數生效。
-
----
-
-## Step 6：安裝 VS Code 擴充功能（選用但推薦）
+## Step 5：安裝 VS Code 擴充功能（選用但推薦）
 
 以下擴充功能不是必要的，但會讓活動體驗更好。
 
@@ -282,7 +233,7 @@ Git Graph 可以用圖形化的方式顯示 Git 的分支和合併歷史，讓�
 
 ---
 
-## Step 7：驗證安裝
+## Step 6：驗證安裝
 
 讓我們確認所有東西都裝好了。打開 VS Code，開啟終端機（`` Ctrl+` ``），依序輸入以下指令：
 
@@ -328,19 +279,7 @@ main
 
 > 如果這裡顯示空白或 `master`，請回到 Step 2 執行 `git config --global init.defaultBranch main`。
 
-### 5. 確認 Node.js 已安裝
-
-```bash
-node --version
-```
-
-預期輸出（版本號可能不同，v20 以上即可）：
-
-```
-v20.18.0
-```
-
-**如果以上五項都有正確的輸出，恭喜你，課前準備完成了！**
+**如果以上四項都有正確的輸出，恭喜你，課前準備完成了！**
 
 ---
 
@@ -393,17 +332,9 @@ Windows 11 的路徑：檔案總管 → 上方工具列 → **檢視** → **顯
 
 不過活動中講師的畫面會是英文介面，建議你也用英文，方便對照。
 
-### Q：Node.js 的 LTS 和 Current 差在哪？要選哪個？
-
-選 **LTS**（Long-Term Support，長期支援版）。LTS 比較穩定，適合大部分場景。Current 版是最新功能但可能有未知問題。我們只需要 v20 以上，LTS 一定符合。
-
-### Q：`node --version` 顯示 v18 或更低，可以用嗎？
-
-我們的腳本需要 **Node.js 20 以上**。如果你的版本太舊，請到 [nodejs.org](https://nodejs.org) 下載最新的 LTS 版本重新安裝即可（會自動覆蓋舊版）。
-
 ### Q：我用 Linux 可以嗎？
 
-可以！大部分 Linux 發行版自帶 Git，如果沒有可以用套件管理器安裝（例如 `sudo apt install git`）。VS Code 和 Node.js 也都有 Linux 版。Node.js 建議透過 [NodeSource](https://github.com/nodesource/distributions) 或 [nvm](https://github.com/nvm-sh/nvm) 安裝，確保版本夠新。活動的操作流程完全適用。
+可以！大部分 Linux 發行版自帶 Git，如果沒有可以用套件管理器安裝（例如 `sudo apt install git`）。VS Code 也有 Linux 版。活動的操作流程完全適用。
 
 ---
 
@@ -418,7 +349,6 @@ Windows 11 的路徑：檔案總管 → 上方工具列 → **檢視** → **顯
 - [ ] 已註冊 GitHub 帳號並能正常登入
 - [ ] 已安裝 VS Code
 - [ ] 能在 VS Code 中開啟終端機（`Ctrl+`\`）
-- [ ] 已安裝 Node.js，且 `node --version` 顯示 v20 以上
 - [ ] （選用）已安裝 Git Graph 擴充功能
 
 **全部打勾就代表你準備好了，活動當天見！**
