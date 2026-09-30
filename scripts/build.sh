@@ -106,10 +106,6 @@ if [ ${#teams[@]} -eq 0 ]; then
 <div class="empty-state">
   <div class="empty-state__icon">👋</div>
   <h2>尚未建立任何小組</h2>
-  <p>請講師執行以下指令來初始化小組：</p>
-  <p>Windows：<code>scripts\init-teams &lt;組數&gt;</code></p>
-  <p>macOS / Linux：<code>bash scripts/init-teams.sh &lt;組數&gt;</code></p>
-  <p>例如 <code>5</code> 會建立 Team A 到 Team E。</p>
 </div>
 EMPTY
 else
